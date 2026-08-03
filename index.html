@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Events — Private Event Planning &amp; Setup in Dubai &amp; UAE</title>
+  <meta name="description" content="Magic Events organizes and sets up private events across Dubai and the UAE — birthdays, anniversaries, proposals, baby showers, Eid gatherings and more. Themed decorations, balloon garlands, cake table styling, lighting and full venue coordination.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0c0c0c;
+      --dark: #131313;
+      --card: #1a1a19;
+      --card-hover: #21211f;
+      --line: #2a2a28;
+      --beige: #d3bd96;
+      --beige-soft: #e8dcc4;
+      --gray: #a4a19b;
+      --gray-dim: #6e6c67;
+      --white: #f4f1ea;
+      --radius: 18px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- Nav ---------- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(12,12,12,.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem; letter-spacing: .06em; color: var(--white);
+    }
+    .logo em { font-style: italic; color: var(--beige); }
+    .nav-links { display: flex; gap: 34px; align-items: center; }
+    .nav-links a {
+      font-size: .82rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gray); transition: color .25s;
+    }
+    .nav-links a:hover { color: var(--beige); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--beige); color: #171512;
+      font-weight: 600; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase;
+      padding: 13px 26px; border-radius: 100px;
+      transition: background .25s, transform .25s;
+    }
+    .btn:hover { background: var(--beige-soft); transform: translateY(-2px); }
+    .btn.ghost {
+      background: transparent; color: var(--beige);
+      border: 1px solid rgba(211,189,150,.45);
+    }
+    .btn.ghost:hover { background: rgba(211,189,150,.08); }
+    .nav-links .btn { padding: 10px 22px; }
+
+    /* ---------- Hero ---------- */
+    header {
+      position: relative;
+      min-height: 100svh;
+      display: flex; align-items: center;
+      padding: 140px 0 90px;
+      background:
+        radial-gradient(ellipse 60% 45% at 72% 18%, rgba(211,189,150,.10), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 15% 85%, rgba(211,189,150,.05), transparent 60%),
+        var(--black);
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(244,241,234,.045) 1px, transparent 1px);
+      background-size: 26px 26px;
+      mask-image: radial-gradient(ellipse 70% 60% at 60% 40%, #000 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 60% 40%, #000 30%, transparent 75%);
+    }
+    .hero { position: relative; max-width: 780px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: .78rem; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--beige); margin-bottom: 28px;
+    }
+    .eyebrow::before { content: ""; width: 42px; height: 1px; background: var(--beige); opacity: .6; }
+    .hero h1 {
+      font-size: clamp(2.9rem, 7vw, 5.4rem);
+      line-height: 1.05; letter-spacing: .01em; font-weight: 500;
+    }
+    .hero h1 em { font-style: italic; color: var(--beige); }
+    .hero p {
+      margin: 30px 0 42px; max-width: 560px;
+      color: var(--gray); font-size: 1.06rem;
+    }
+    .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-meta {
+      margin-top: 70px; display: flex; gap: 46px; flex-wrap: wrap;
+      color: var(--gray-dim); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 10px; }
+    .hero-meta i {
+      font-style: normal; width: 5px; height: 5px; border-radius: 50%;
+      background: var(--beige); display: inline-block;
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 110px 0; }
+    .sec-head { max-width: 640px; margin-bottom: 64px; }
+    .sec-head .eyebrow { margin-bottom: 18px; }
+    .sec-head h2 { font-size: clamp(2.1rem, 4.5vw, 3.2rem); line-height: 1.12; }
+    .sec-head h2 em { font-style: italic; color: var(--beige); }
+    .sec-head p { color: var(--gray); margin-top: 18px; }
+
+    /* ---------- Services ---------- */
+    #services { background: var(--dark); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .grid {
+      display: grid; gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 34px 30px;
+      transition: background .3s, border-color .3s, transform .3s;
+    }
+    .card:hover { background: var(--card-hover); border-color: rgba(211,189,150,.35); transform: translateY(-4px); }
+    .card .num {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      color: var(--beige); font-size: 1.05rem; opacity: .85;
+      display: block; margin-bottom: 18px;
+    }
+    .card h3 { font-size: 1.45rem; margin-bottom: 10px; color: var(--white); }
+    .card p { color: var(--gray); font-size: .93rem; }
+
+    /* ---------- Included ---------- */
+    .included-list {
+      display: grid; gap: 0;
+      grid-template-columns: 1fr;
+      border-top: 1px solid var(--line);
+    }
+    .inc {
+      display: grid; grid-template-columns: 64px 1fr 2fr; gap: 26px;
+      align-items: baseline;
+      padding: 30px 8px;
+      border-bottom: 1px solid var(--line);
+      transition: padding-left .3s;
+    }
+    .inc:hover { padding-left: 20px; }
+    .inc .num {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      color: var(--beige); font-size: 1.1rem;
+    }
+    .inc h3 { font-size: 1.5rem; }
+    .inc p { color: var(--gray); font-size: .95rem; }
+    @media (max-width: 720px) {
+      .inc { grid-template-columns: 44px 1fr; }
+      .inc p { grid-column: 2; }
+    }
+
+    /* ---------- Locations ---------- */
+    #where { background: var(--dark); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .where-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    @media (max-width: 860px) { .where-flex { grid-template-columns: 1fr; } }
+    .where-flex .sec-head { margin-bottom: 0; }
+    .loc-cards { display: grid; gap: 14px; }
+    .loc {
+      display: flex; align-items: center; gap: 18px;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 14px; padding: 20px 24px;
+      color: var(--white); font-size: 1rem; font-weight: 400;
+      transition: border-color .3s, transform .3s;
+    }
+    .loc:hover { border-color: rgba(211,189,150,.35); transform: translateX(6px); }
+    .loc svg { flex: none; width: 22px; height: 22px; stroke: var(--beige); }
+
+    /* ---------- How it works ---------- */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+    .step { position: relative; padding: 30px 26px 0; border-left: 1px solid var(--line); }
+    .step .num {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 2.6rem; color: var(--beige); line-height: 1; display: block; margin-bottom: 16px;
+    }
+    .step h3 { font-size: 1.35rem; margin-bottom: 8px; }
+    .step p { color: var(--gray); font-size: .92rem; }
+
+    /* ---------- Contact ---------- */
+    #contact {
+      background:
+        radial-gradient(ellipse 55% 60% at 50% 100%, rgba(211,189,150,.10), transparent 70%),
+        var(--black);
+      border-top: 1px solid var(--line);
+      text-align: center;
+      padding: 130px 0;
+    }
+    #contact .eyebrow { justify-content: center; }
+    #contact .eyebrow::after { content: ""; width: 42px; height: 1px; background: var(--beige); opacity: .6; }
+    #contact h2 { font-size: clamp(2.4rem, 5.5vw, 4rem); line-height: 1.1; }
+    #contact h2 em { font-style: italic; color: var(--beige); }
+    #contact > .wrap > p { color: var(--gray); max-width: 520px; margin: 22px auto 48px; }
+    .contact-cards {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px; max-width: 860px; margin: 0 auto;
+    }
+    .ccard {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 34px 26px; display: flex; flex-direction: column; align-items: center; gap: 14px;
+      transition: border-color .3s, transform .3s, background .3s;
+    }
+    .ccard:hover { border-color: rgba(211,189,150,.4); background: var(--card-hover); transform: translateY(-5px); }
+    .ccard svg { width: 30px; height: 30px; stroke: var(--beige); }
+    .ccard b { font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; color: var(--gray); }
+    .ccard span { color: var(--white); font-size: .98rem; word-break: break-all; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 34px 0;
+      color: var(--gray-dim); font-size: .82rem;
+    }
+    .foot { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+
+    @media (max-width: 760px) {
+      .nav-links a:not(.btn) { display: none; }
+      section { padding: 80px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">Magic <em>Events</em></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#included">What We Do</a>
+      <a href="#where">Where</a>
+      <a href="#contact" class="btn ghost">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap hero">
+    <span class="eyebrow">Private Event Planning · Dubai &amp; UAE</span>
+    <h1>We turn private moments into <em>unforgettable</em> celebrations.</h1>
+    <p>Magic Events designs and sets up complete private celebrations — from themed decorations and balloon backdrops to cake table styling, lighting and full venue coordination. You choose the location; we bring the magic.</p>
+    <div class="hero-cta">
+      <a class="btn" href="https://wa.me/971559555632" target="_blank" rel="noopener">Plan Your Event</a>
+      <a class="btn ghost" href="#services">Explore Services</a>
+    </div>
+    <div class="hero-meta">
+      <span><i></i>Full Event Setup</span>
+      <span><i></i>Your Chosen Venue</span>
+      <span><i></i>Custom Packages</span>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our Services</span>
+      <h2>Every occasion, <em>beautifully</em> staged.</h2>
+      <p>Whatever you're celebrating, we design a setup around your theme, your guests and your space.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><span class="num">01</span><h3>Birthday Parties</h3><p>Memorable themed birthdays for children and adults — playful or elegant, always personal.</p></div>
+      <div class="card"><span class="num">02</span><h3>Wedding Anniversaries</h3><p>Romantic, refined setups to honour your milestone in intimate style.</p></div>
+      <div class="card"><span class="num">03</span><h3>Marriage Proposals</h3><p>The perfect scene for the perfect question — candles, flowers, lights and privacy.</p></div>
+      <div class="card"><span class="num">04</span><h3>Graduation Celebrations</h3><p>Celebrate achievement with a setup as proud as the moment deserves.</p></div>
+      <div class="card"><span class="num">05</span><h3>Gender Reveals &amp; Baby Showers</h3><p>Soft, joyful styling for life's sweetest announcements and new arrivals.</p></div>
+      <div class="card"><span class="num">06</span><h3>Eid &amp; Family Gatherings</h3><p>Warm, festive arrangements that bring family together for the occasions that matter.</p></div>
+      <div class="card"><span class="num">07</span><h3>Private Parties</h3><p>Any reason to celebrate is reason enough — we style private parties of every kind.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="included">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What We Do</span>
+      <h2>The <em>full</em> setup, handled.</h2>
+      <p>Our service covers everything your event needs to look and feel exceptional.</p>
+    </div>
+    <div class="included-list">
+      <div class="inc"><span class="num">I</span><h3>Themed Decorations</h3><p>Complete decor styled around your chosen theme and colour palette.</p></div>
+      <div class="inc"><span class="num">II</span><h3>Balloon Garlands &amp; Backdrops</h3><p>Statement balloon installations and photo-ready backdrops.</p></div>
+      <div class="inc"><span class="num">III</span><h3>Dessert, Food &amp; Drinks Styling</h3><p>Dessert, food and drinks presentation with elegant cake table styling.</p></div>
+      <div class="inc"><span class="num">IV</span><h3>Lighting</h3><p>String and fairy lights that give your venue a warm, magical glow.</p></div>
+      <div class="inc"><span class="num">V</span><h3>Table Arrangements</h3><p>Thoughtful table settings and arrangements for your guests.</p></div>
+      <div class="inc"><span class="num">VI</span><h3>Venue Coordination</h3><p>We coordinate and arrange the whole space, so you simply arrive and enjoy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="where">
+  <div class="wrap where-flex">
+    <div class="sec-head">
+      <span class="eyebrow">Where We Work</span>
+      <h2>Your venue, <em>our</em> canvas.</h2>
+      <p>Events are typically held at your chosen location anywhere across Dubai and the UAE. We come to you, transform the space, and coordinate everything on site.</p>
+    </div>
+    <div class="loc-cards">
+      <div class="loc">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg>
+        Private Villas
+      </div>
+      <div class="loc">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12M12 3v4M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>
+        Rented Holiday Homes
+      </div>
+      <div class="loc">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21h20M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M10 7h.01M14 7h.01M10 11h.01M14 11h.01M10 15h.01M14 15h.01"/></svg>
+        Hotel Apartments
+      </div>
+      <div class="loc">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Anywhere in Dubai &amp; the UAE
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How It Works</span>
+      <h2>Three steps to <em>magic</em>.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><h3>Tell Us Your Occasion</h3><p>Message us on WhatsApp with your event type, date, location and theme ideas.</p></div>
+      <div class="step"><span class="num">2</span><h3>Choose Your Package</h3><p>We propose a setup and package tailored to your event, with a clear service fee.</p></div>
+      <div class="step"><span class="num">3</span><h3>Arrive &amp; Celebrate</h3><p>We handle the complete setup and coordination — you enjoy the moment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Get In Touch</span>
+    <h2>Let's plan something <em>magical</em>.</h2>
+    <p>Reach us on WhatsApp for the fastest reply, or drop us an email — we'd love to hear about your event.</p>
+    <div class="contact-cards">
+      <a class="ccard" href="https://wa.me/971559555632" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.5 9.5c.5 2.5 3 5 5.5 5.5l1.5-1.5 2 1c-.5 1.5-2 2-3.5 1.5-3-1-6-4-7-7-.5-1.5 0-3 1.5-3.5l1 2-1 2z"/></svg>
+        <b>WhatsApp</b>
+        <span>+971 55 955 5632</span>
+      </a>
+      <a class="ccard" href="mailto:magicevents.fze@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <b>Email</b>
+        <span>magicevents.fze@gmail.com</span>
+      </a>
+      <a class="ccard" href="https://www.instagram.com/magicevents.ae" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg>
+        <b>Instagram</b>
+        <span>@magicevents.ae</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Magic Events · Dubai, UAE</span>
+    <span class="serif" style="font-style:italic;color:var(--beige);font-size:1rem;">Private events, perfectly staged.</span>
+  </div>
+</footer>
+
+</body>
+</html>
