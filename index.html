@@ -105,16 +105,16 @@
     header::after {
       content: "";
       position: absolute; z-index: 0;
-      top: 50%; right: -4%;
-      width: min(58%, 720px); height: 60%;
-      transform: translateY(-50%);
+      top: 50%; left: 50%;
+      width: min(82%, 1000px); height: 62%;
+      transform: translate(-50%, -50%);
       background: url('assets/logo.png') no-repeat center / contain;
-      opacity: .055;
+      opacity: .05;
       pointer-events: none;
     }
     .hero { position: relative; z-index: 1; max-width: 780px; }
     @media (max-width: 860px) {
-      header::after { width: 120%; right: -30%; opacity: .04; }
+      header::after { width: 96%; opacity: .045; }
     }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 12px;
