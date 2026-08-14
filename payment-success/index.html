@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Received — Magic Events</title>
+  <meta name="description" content="Thank you — your payment to Magic Events has been received.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0c0c0c;
+      --card: #1a1a19;
+      --card-hover: #21211f;
+      --line: #2a2a28;
+      --beige: #d3bd96;
+      --beige-soft: #e8dcc4;
+      --gray: #a4a19b;
+      --gray-dim: #6e6c67;
+      --white: #f4f1ea;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100svh;
+      display: flex; flex-direction: column;
+    }
+    h1, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    main {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 90px 0 70px;
+      position: relative;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(211,189,150,.10), transparent 65%),
+        var(--black);
+    }
+    main::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(244,241,234,.045) 1px, transparent 1px);
+      background-size: 26px 26px;
+      mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, #000 25%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, #000 25%, transparent 75%);
+      pointer-events: none;
+    }
+    .inner { position: relative; z-index: 1; }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; letter-spacing: .06em; color: var(--white);
+      display: inline-block; margin-bottom: 46px;
+    }
+    .logo em { font-style: italic; color: var(--beige); }
+
+    .tick {
+      width: 92px; height: 92px; margin: 0 auto 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(211,189,150,.4);
+      background: rgba(211,189,150,.07);
+      display: flex; align-items: center; justify-content: center;
+      animation: pop .5s cubic-bezier(.2,.9,.3,1.4) both;
+    }
+    .tick svg { width: 42px; height: 42px; stroke: var(--beige); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .tick svg path { stroke-dasharray: 40; stroke-dashoffset: 40; animation: draw .6s .35s ease forwards; }
+    @keyframes pop { from { opacity: 0; transform: scale(.75); } to { opacity: 1; transform: scale(1); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: .76rem; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--beige); margin-bottom: 20px;
+    }
+    .eyebrow::before, .eyebrow::after { content: ""; width: 34px; height: 1px; background: var(--beige); opacity: .55; }
+
+    h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.1; }
+    h1 em { font-style: italic; color: var(--beige); }
+    .lede { color: var(--gray); margin: 22px auto 40px; max-width: 480px; }
+
+    .note {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 26px 28px; max-width: 470px; margin: 0 auto 40px;
+      color: var(--gray); font-size: .93rem; text-align: left;
+    }
+    .note b { color: var(--white); font-weight: 500; display: block; margin-bottom: 6px; font-size: .98rem; }
+
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--beige); color: #171512;
+      font-weight: 600; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase;
+      padding: 13px 26px; border-radius: 100px;
+      transition: background .25s, transform .25s;
+    }
+    .btn:hover { background: var(--beige-soft); transform: translateY(-2px); }
+    .btn.ghost { background: transparent; color: var(--beige); border: 1px solid rgba(211,189,150,.45); }
+    .btn.ghost:hover { background: rgba(211,189,150,.08); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--gray-dim); font-size: .8rem;
+      text-align: center;
+    }
+    footer a { color: var(--gray); }
+    footer a:hover { color: var(--beige); }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="wrap inner">
+    <a class="logo" href="/">Magic <em>Events</em></a>
+
+    <div class="tick">
+      <svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>
+    </div>
+
+    <span class="eyebrow">Payment Received</span>
+    <h1>Thank you — it's <em>confirmed</em>.</h1>
+    <p class="lede">Your payment has gone through successfully. We're already getting things ready for your celebration.</p>
+
+    <div class="note">
+      <b>What happens next</b>
+      You'll receive a payment receipt by email shortly. Our team will be in touch on WhatsApp to confirm your event details, timings and setup.
+    </div>
+
+    <div class="actions">
+      <a class="btn" href="https://wa.me/971559555632" target="_blank" rel="noopener">Message Us on WhatsApp</a>
+      <a class="btn ghost" href="/">Back to Website</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    © 2026 Magic Events · UAE · <a href="mailto:magicevents.fze@gmail.com">magicevents.fze@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
