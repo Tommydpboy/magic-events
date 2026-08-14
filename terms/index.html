@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions — Magic Events</title>
+  <meta name="description" content="The terms and conditions that apply to event planning and setup services provided by Magic Events across the UAE.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0c0c0c;
+      --dark: #131313;
+      --card: #1a1a19;
+      --line: #2a2a28;
+      --beige: #d3bd96;
+      --beige-soft: #e8dcc4;
+      --gray: #a4a19b;
+      --gray-dim: #6e6c67;
+      --white: #f4f1ea;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+    a { color: var(--beige); text-decoration: none; }
+    a:hover { color: var(--beige-soft); text-decoration: underline; }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(12,12,12,.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: .06em; color: var(--white); }
+    .logo:hover { text-decoration: none; color: var(--white); }
+    .logo em { font-style: italic; color: var(--beige); }
+    .back {
+      font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gray); display: inline-flex; align-items: center; gap: 8px;
+    }
+    .back:hover { color: var(--beige); text-decoration: none; }
+
+    /* Header */
+    header {
+      padding: 80px 0 54px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse 60% 70% at 50% 0%, rgba(211,189,150,.08), transparent 65%),
+        var(--black);
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: .74rem; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--beige); margin-bottom: 18px;
+    }
+    .eyebrow::before, .eyebrow::after { content: ""; width: 34px; height: 1px; background: var(--beige); opacity: .55; }
+    header h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); line-height: 1.1; }
+    header h1 em { font-style: italic; color: var(--beige); }
+    .updated { color: var(--gray-dim); font-size: .84rem; margin-top: 18px; letter-spacing: .04em; }
+
+    /* Intro + contents */
+    .intro { padding: 54px 0 0; color: var(--gray); }
+    .intro p + p { margin-top: 16px; }
+
+    .toc {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 28px 30px; margin: 44px 0 10px;
+    }
+    .toc h2 {
+      font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gray); font-family: 'Manrope', sans-serif; font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .toc ol { list-style: none; counter-reset: toc; columns: 2; column-gap: 34px; }
+    .toc li { counter-increment: toc; margin-bottom: 7px; font-size: .9rem; break-inside: avoid; }
+    .toc li::before {
+      content: counter(toc) ".";
+      color: var(--beige); font-family: 'Cormorant Garamond', serif; font-style: italic;
+      margin-right: 8px;
+    }
+    .toc a { color: var(--gray); }
+    .toc a:hover { color: var(--beige); text-decoration: none; }
+    @media (max-width: 620px) { .toc ol { columns: 1; } }
+
+    /* Sections */
+    main { padding: 20px 0 90px; counter-reset: sec; }
+    section { padding-top: 46px; }
+    section h2 {
+      counter-increment: sec;
+      font-size: 1.75rem; line-height: 1.25; margin-bottom: 16px;
+      display: flex; gap: 14px; align-items: baseline;
+      scroll-margin-top: 90px;
+    }
+    section h2::before {
+      content: counter(sec);
+      font-style: italic; color: var(--beige); font-size: 1.15rem;
+      flex: none; min-width: 26px;
+    }
+    section p { color: var(--gray); margin-bottom: 14px; }
+    section p:last-child { margin-bottom: 0; }
+    section ul { list-style: none; margin: 0 0 14px; }
+    section li {
+      color: var(--gray); position: relative; padding-left: 22px; margin-bottom: 9px;
+    }
+    section li::before {
+      content: ""; position: absolute; left: 4px; top: .72em;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--beige); opacity: .75;
+    }
+    strong { color: var(--white); font-weight: 500; }
+
+    .callout {
+      background: var(--card); border: 1px solid var(--line);
+      border-left: 2px solid var(--beige);
+      border-radius: 12px; padding: 20px 24px; margin: 18px 0;
+    }
+    .callout p { margin-bottom: 0; }
+
+    /* Contact block */
+    .contact-block {
+      margin-top: 56px; padding: 34px 30px;
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      text-align: center;
+    }
+    .contact-block h2 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; margin-bottom: 8px;
+    }
+    .contact-block p { color: var(--gray); margin-bottom: 18px; font-size: .95rem; }
+    .contact-lines { display: grid; gap: 6px; font-size: .95rem; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      color: var(--gray-dim); font-size: .82rem;
+    }
+    .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .foot a { color: var(--gray-dim); }
+    .foot a:hover { color: var(--beige); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="/">Magic <em>Events</em></a>
+    <a class="back" href="/">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1>Terms &amp; <em>Conditions</em></h1>
+    <p class="updated">Last updated: 14 August 2026</p>
+  </div>
+</header>
+
+<div class="wrap intro">
+  <p>These terms and conditions ("<strong>Terms</strong>") set out the basis on which Magic Events ("<strong>Magic Events</strong>", "<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") provides event planning, styling and setup services to you ("<strong>the Client</strong>", "<strong>you</strong>").</p>
+  <p>By confirming a booking with us, paying a deposit, or accepting a quotation in writing (including by WhatsApp or email), you confirm that you have read, understood and agreed to these Terms.</p>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Our services</a></li>
+      <li><a href="#s2">Quotations and pricing</a></li>
+      <li><a href="#s3">Bookings and confirmation</a></li>
+      <li><a href="#s4">Payment</a></li>
+      <li><a href="#s5">Changes to a booking</a></li>
+      <li><a href="#s6">Cancellation by you</a></li>
+      <li><a href="#s7">Cancellation by us</a></li>
+      <li><a href="#s8">The venue and access</a></li>
+      <li><a href="#s9">Your responsibilities</a></li>
+      <li><a href="#s10">Setup, collection and hired items</a></li>
+      <li><a href="#s11">Balloons and decorations</a></li>
+      <li><a href="#s12">Outdoor events and weather</a></li>
+      <li><a href="#s13">Food, drinks and cakes</a></li>
+      <li><a href="#s14">Safety and supervision</a></li>
+      <li><a href="#s15">Damage and loss</a></li>
+      <li><a href="#s16">Photography and marketing</a></li>
+      <li><a href="#s17">Our liability</a></li>
+      <li><a href="#s18">Events beyond our control</a></li>
+      <li><a href="#s19">Complaints</a></li>
+      <li><a href="#s20">Privacy</a></li>
+      <li><a href="#s21">Intellectual property</a></li>
+      <li><a href="#s22">Changes to these Terms</a></li>
+      <li><a href="#s23">Governing law</a></li>
+    </ol>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section>
+    <h2 id="s1">Our services</h2>
+    <p>Magic Events organises and sets up private events across the United Arab Emirates, including birthday parties for children and adults, wedding anniversaries, marriage proposals, graduation celebrations, gender reveals, baby showers, Eid and family gatherings, and general private parties.</p>
+    <p>Depending on the package you select, our service may include:</p>
+    <ul>
+      <li>Themed decorations styled to your chosen concept and colour palette</li>
+      <li>Balloon garlands, installations and backdrops</li>
+      <li>Dessert, food, drinks and cake table styling</li>
+      <li>Lighting, including string and fairy lights</li>
+      <li>Table arrangements and settings</li>
+      <li>Coordination and arrangement of the venue space</li>
+    </ul>
+    <p>The exact items, quantities and scope included in your event will be those set out in the quotation or package confirmed with you in writing. Anything not expressly listed is not included.</p>
+  </section>
+
+  <section>
+    <h2 id="s2">Quotations and pricing</h2>
+    <p>We charge a service fee per event, based on the package, scale and setup you select. Quotations are provided individually and are valid for <strong>7 days</strong> from the date issued, unless we state otherwise in writing.</p>
+    <p>Prices may vary according to the size of the setup, the theme and materials required, the location of the venue, and the date and time of the event. Events at venues outside our standard service area, or requiring setup at unsociable hours, may incur an additional travel or surcharge fee, which we will tell you about before you confirm.</p>
+    <p>All prices are quoted in UAE Dirhams (AED). Unless expressly stated otherwise on your quotation, prices are exclusive of value added tax (VAT), which will be added where applicable.</p>
+  </section>
+
+  <section>
+    <h2 id="s3">Bookings and confirmation</h2>
+    <p>A booking is only confirmed once we have received your written acceptance of the quotation <em>and</em> your deposit has cleared. Until both have happened, your date, theme and items remain unreserved and may be taken by another client.</p>
+    <p>We recommend booking as far in advance as possible. We will always try to accommodate short-notice requests, but availability of dates, materials and specific decor items cannot be guaranteed.</p>
+    <p>You confirm that you are at least 18 years old and legally able to enter into this agreement.</p>
+  </section>
+
+  <section>
+    <h2 id="s4">Payment</h2>
+    <p>Unless agreed otherwise in writing:</p>
+    <ul>
+      <li>A <strong>non-refundable deposit of 50%</strong> of the total fee is payable to confirm your booking</li>
+      <li>The <strong>remaining balance is payable no later than 48 hours before</strong> the event setup date</li>
+    </ul>
+    <p>The deposit covers the reservation of your date and the design, sourcing and preparation work we begin on your behalf as soon as you book.</p>
+    <p>We accept payment by card through a secure payment link provided by our payment services provider, and by bank transfer or other methods we may specify. Card payments are processed entirely by our payment provider; <strong>we do not receive, handle or store your card details</strong>.</p>
+    <p>If the balance is not received by the due date, we reserve the right to treat the booking as cancelled by you and to apply the cancellation charges in section 6. We are not obliged to begin or complete any setup where payment remains outstanding.</p>
+  </section>
+
+  <section>
+    <h2 id="s5">Changes to a booking</h2>
+    <p>We understand that plans change. Requests to change the theme, colour scheme, scale of the setup, guest numbers, timings or venue must be made in writing and are subject to our availability and to the availability of materials.</p>
+    <p>Changes requested <strong>7 days or more</strong> before the event will be accommodated wherever possible. Changes requested <strong>within 7 days</strong> of the event may not be possible, and any additional cost of materials, labour or lost items already purchased for your original design will be charged to you.</p>
+    <p>Where a change increases the scope of work, the additional fee must be paid before we carry out the change. Where a change reduces the scope, we will refund the difference only to the extent that we have not already incurred cost on the original design.</p>
+    <p>Requests to move your event to a different date are treated as a change of booking, subject to availability, and may be made once without an amendment fee if requested 7 days or more in advance. A postponement requested within 7 days of the event is treated as a cancellation under section 6.</p>
+  </section>
+
+  <section>
+    <h2 id="s6">Cancellation by you</h2>
+    <p>If you need to cancel, please tell us in writing as soon as possible. The following charges apply, calculated on the total fee for your event:</p>
+    <ul>
+      <li><strong>More than 14 days before the event:</strong> you lose your deposit; any balance already paid is refunded</li>
+      <li><strong>7 to 14 days before the event:</strong> 50% of the total fee is payable</li>
+      <li><strong>Less than 7 days before the event:</strong> 100% of the total fee is payable</li>
+    </ul>
+    <p>These charges reflect the fact that we reserve your date exclusively, turn away other bookings, and purchase materials, custom items and perishable stock specifically for your event well ahead of the day itself.</p>
+    <p>Any refund due will be made using the same payment method you used to pay us, within 14 days of the cancellation being agreed.</p>
+  </section>
+
+  <section>
+    <h2 id="s7">Cancellation by us</h2>
+    <p>We may cancel or decline to carry out a booking if:</p>
+    <ul>
+      <li>Payment has not been made in accordance with section 4</li>
+      <li>We are unable to access the venue, or the venue is unsafe or unsuitable for the agreed setup</li>
+      <li>Required permissions from the venue owner, hotel or building management have not been obtained</li>
+      <li>Our team is subjected to abusive, threatening or unsafe behaviour</li>
+      <li>Circumstances beyond our reasonable control prevent us from performing the service (see section 18)</li>
+    </ul>
+    <p>Where we cancel for a reason that is not your fault and not beyond our reasonable control, we will refund in full everything you have paid us. That refund is the full extent of our responsibility to you in those circumstances.</p>
+  </section>
+
+  <section>
+    <h2 id="s8">The venue and access</h2>
+    <p>Our events are typically held at a location of your choosing, such as a private villa, a rented holiday home, or a hotel apartment.</p>
+    <div class="callout">
+      <p>It is <strong>your responsibility</strong> to obtain all necessary permissions from the property owner, landlord, hotel, host or building management before the event — including permission to decorate, to fix items to walls or ceilings, to use balloons or lighting, and for our team to access the property at the agreed time.</p>
+    </div>
+    <p>You must give us accurate details of the venue, including its address, access arrangements, parking, lift access, and any restrictions or house rules that apply.</p>
+    <p>If we arrive and are unable to access the venue, are refused entry, or are prevented from carrying out the agreed setup because permission was not in place, the booking will be treated as cancelled by you at short notice and the full fee remains payable.</p>
+  </section>
+
+  <section>
+    <h2 id="s9">Your responsibilities</h2>
+    <p>To allow us to deliver your event properly, you agree to:</p>
+    <ul>
+      <li>Provide access to the venue for the agreed setup window, and be present or nominate someone to receive us</li>
+      <li>Ensure the space is clean, empty and ready for setup at the agreed time</li>
+      <li>Provide access to a working power supply where lighting or powered items are part of the setup</li>
+      <li>Inform us in advance of anything that may affect the setup, such as low ceilings, delicate surfaces, pets, or restrictions on fixings</li>
+      <li>Respond in reasonable time to questions about your design, theme or timings</li>
+    </ul>
+    <p>If setup is delayed because the space is not ready, access is late, or information you gave us was inaccurate, we will do our best to complete the setup, but we cannot guarantee the full design will be delivered and no refund will be due. Additional waiting time may be charged.</p>
+  </section>
+
+  <section>
+    <h2 id="s10">Setup, collection and hired items</h2>
+    <p>We will agree a setup window with you in advance. Setup times depend on the scale of the design and we will tell you how long we expect to need.</p>
+    <p>Some items in your setup may be provided on a hire basis rather than sold to you — for example stands, frames, backdrops, plinths, lighting units and props. These remain our property at all times.</p>
+    <p>Hired items must be available for collection at the agreed time and returned in the condition in which they were supplied, allowing for reasonable wear. You are responsible for the safekeeping of hired items from the moment setup is complete until they are collected.</p>
+    <p>If collection is prevented or delayed through no fault of ours, we may charge an additional collection fee or a daily hire charge until the items are recovered.</p>
+  </section>
+
+  <section>
+    <h2 id="s11">Balloons and decorations</h2>
+    <p>Balloons are a natural product and their appearance changes over time. Latex balloons in particular are affected by heat, humidity, direct sunlight and air conditioning, and may deflate, oxidise, discolour or pop. This is normal and is not a defect.</p>
+    <p>We design our installations to look their best for the duration of your event, but <strong>we cannot guarantee the lifespan or condition of balloons beyond the time of handover</strong>, particularly outdoors or in hot conditions.</p>
+    <p>Colours of balloons, flowers, fabrics and printed items may vary slightly from images, samples or mock-ups shown to you, due to differences in materials, batches and screen displays. Fresh flowers and seasonal items are subject to availability, and we may substitute an item of equivalent quality and appearance where necessary.</p>
+    <p>Setups are designed to be decorative. They are not play equipment and should not be climbed on, pulled or moved.</p>
+  </section>
+
+  <section>
+    <h2 id="s12">Outdoor events and weather</h2>
+    <p>Where a setup is outdoors, or partly outdoors, you accept that wind, rain, heat, humidity and sand can affect decorations, balloons, lighting and table arrangements.</p>
+    <p>We will advise you honestly if we believe conditions make an outdoor setup unsafe or unlikely to hold. If you ask us to proceed anyway, we will do so at your risk and no refund will be due for weather-related damage.</p>
+    <p>We recommend having an indoor alternative available for outdoor events. Moving a setup indoors on the day may not be possible and, where it is, may incur an additional charge.</p>
+  </section>
+
+  <section>
+    <h2 id="s13">Food, drinks and cakes</h2>
+    <p>Where our service includes the styling of dessert, food, drinks or cake tables, our role is the presentation and arrangement of those items unless the quotation expressly states that we are supplying the food itself.</p>
+    <p>Where food, drinks or cakes are supplied by us, they may be prepared by third-party suppliers. It is your responsibility to inform us in writing, before the event, of any allergies or dietary requirements of you or your guests. We cannot guarantee that any item is free from allergens or from cross-contamination.</p>
+    <p>Once food and drink items have been set up and handed over, their storage, service and consumption are your responsibility. We are not responsible for items left unrefrigerated, exposed to heat, or consumed after the event.</p>
+  </section>
+
+  <section>
+    <h2 id="s14">Safety and supervision</h2>
+    <p>You are responsible for the supervision of your guests, and in particular of children, throughout the event.</p>
+    <ul>
+      <li>Balloons and small decorative items can present a choking or suffocation hazard to young children and should be kept away from them</li>
+      <li>Lighting, cables and powered items must not be tampered with, and should be kept away from water</li>
+      <li>Where candles or any open flame are used, they must never be left unattended and must be kept clear of balloons, fabrics and other decorations</li>
+      <li>Backdrops, arches, stands and props must not be climbed on, leaned against or moved</li>
+    </ul>
+    <p>Once our setup is complete and handed over to you, responsibility for the safe use of the setup and the supervision of the space passes to you.</p>
+  </section>
+
+  <section>
+    <h2 id="s15">Damage and loss</h2>
+    <p>You are responsible for any loss of, or damage to, our equipment, props and hired items while they are at your venue, other than damage caused by our own negligence or by fair wear and tear. We will charge the reasonable cost of repair or replacement.</p>
+    <p>We take great care when working in your space. However, we are not responsible for damage to the venue or its contents arising from the ordinary and agreed installation of decorations — for example marks left by approved fixings — or from any surface, wall, ceiling or fitting that was already weak, damaged or unsuitable.</p>
+    <p>Where you have not obtained the venue's permission to decorate, any claim made by the venue in relation to our setup is your responsibility.</p>
+  </section>
+
+  <section>
+    <h2 id="s16">Photography and marketing</h2>
+    <p>We usually photograph and film our setups once they are complete and before guests arrive, and we may use those images and videos to promote our work — for example on our website, on Instagram, or in proposals to other clients.</p>
+    <div class="callout">
+      <p>These images are of the <strong>decor and the space only</strong>. We do not photograph your guests or your celebration, and we will never publish images that identify you, your guests or your exact address without your written permission.</p>
+    </div>
+    <p>If you would prefer that we do not photograph your setup at all, simply tell us in writing before the event and we will respect that. There is no charge and it will not affect your booking in any way.</p>
+    <p>If you share photographs of our work on social media, we would be grateful for a credit to <a href="https://www.instagram.com/magicevents.ae" target="_blank" rel="noopener">@magicevents.ae</a>, though you are under no obligation to do so.</p>
+  </section>
+
+  <section>
+    <h2 id="s17">Our liability</h2>
+    <p>We will provide our services with reasonable care and skill.</p>
+    <p>Nothing in these Terms limits or excludes our liability for death or personal injury caused by our negligence, for fraud, or for anything else which cannot lawfully be limited or excluded.</p>
+    <p>Subject to that, our total liability to you in connection with a booking is limited to the total fee you have paid us for that event.</p>
+    <p>We are not liable for indirect or consequential loss, or for loss of enjoyment, opportunity or profit. We are not responsible for the acts or omissions of third parties you engage directly, such as venues, caterers, photographers or entertainers.</p>
+  </section>
+
+  <section>
+    <h2 id="s18">Events beyond our control</h2>
+    <p>We are not liable for any failure or delay in performing our obligations where that failure or delay results from circumstances beyond our reasonable control. This includes severe weather, sandstorms, fire, flood, epidemic or pandemic, government restrictions or public health measures, periods of national mourning, road closures, accidents, power failures, and the failure of suppliers for reasons beyond our control.</p>
+    <p>If such an event occurs, we will contact you as soon as possible and will work with you to reschedule your event to a mutually convenient date. Where rescheduling is not possible, we will refund sums you have paid us, less any costs we have already reasonably and unavoidably incurred on your event.</p>
+  </section>
+
+  <section>
+    <h2 id="s19">Complaints</h2>
+    <p>If any part of your event is not as agreed, please tell us <strong>at the time of setup or on the day of the event</strong>, so that we have the opportunity to put it right while we are still able to do so.</p>
+    <p>Any complaint made after the event should be sent to us in writing, with photographs where relevant, within 7 days of the event date. We will acknowledge it and respond as quickly as we can.</p>
+  </section>
+
+  <section>
+    <h2 id="s20">Privacy</h2>
+    <p>We collect only the information we need to plan and deliver your event, such as your name, contact details, venue address and event preferences.</p>
+    <p>We use that information to communicate with you, prepare your quotation, deliver your event, and keep records required for our business. We do not sell your information, and we share it with third parties only where necessary to deliver your event, such as with a supplier working on your booking or with our payment services provider.</p>
+    <p>Card payments are handled by our payment services provider. We do not receive or store your card details at any point.</p>
+    <p>If you would like to know what information we hold about you, or would like it corrected or deleted, please contact us at <a href="mailto:magicevents.fze@gmail.com">magicevents.fze@gmail.com</a>.</p>
+  </section>
+
+  <section>
+    <h2 id="s21">Intellectual property</h2>
+    <p>All designs, concepts, mood boards, proposals, photographs and written content that we create, together with the content of this website and our brand name and logo, remain our property.</p>
+    <p>You may use material we prepare for you for your own personal purposes. It may not be copied, resold, or used commercially, and it may not be passed to another supplier to reproduce, without our written permission.</p>
+  </section>
+
+  <section>
+    <h2 id="s22">Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. The version that applies to your booking is the version published on this page on the date your booking was confirmed. Changes made afterwards will not affect a booking that is already confirmed.</p>
+  </section>
+
+  <section>
+    <h2 id="s23">Governing law</h2>
+    <p>These Terms, and any dispute arising out of them or out of our services, are governed by the laws of the United Arab Emirates. The competent courts of the United Arab Emirates have exclusive jurisdiction.</p>
+    <p>If any part of these Terms is found to be unenforceable, the remaining provisions continue in full effect.</p>
+  </section>
+
+  <div class="contact-block">
+    <h2>Questions about these Terms?</h2>
+    <p>We're always happy to explain anything here before you book.</p>
+    <div class="contact-lines">
+      <span><a href="https://wa.me/971559555632" target="_blank" rel="noopener">WhatsApp: +971 55 955 5632</a></span>
+      <span><a href="mailto:magicevents.fze@gmail.com">magicevents.fze@gmail.com</a></span>
+      <span><a href="https://www.instagram.com/magicevents.ae" target="_blank" rel="noopener">@magicevents.ae</a></span>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Magic Events · UAE</span>
+    <span><a href="/">magiceventsuae.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

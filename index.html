@@ -271,6 +271,9 @@
       color: var(--gray-dim); font-size: .82rem;
     }
     .foot { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .foot a { color: var(--gray-dim); transition: color .25s; }
+    .foot a:hover { color: var(--beige); }
+    .foot .sep { opacity: .45; margin: 0 10px; }
 
     @media (max-width: 760px) {
       .nav-links a:not(.btn) { display: none; }
@@ -415,7 +418,7 @@
 
 <footer>
   <div class="wrap foot">
-    <span>© 2026 Magic Events · UAE</span>
+    <span>© 2026 Magic Events · UAE<span class="sep">·</span><a href="/terms/">Terms &amp; Conditions</a></span>
     <span class="serif" style="font-style:italic;color:var(--beige);font-size:1rem;">Private events, perfectly staged.</span>
   </div>
 </footer>
